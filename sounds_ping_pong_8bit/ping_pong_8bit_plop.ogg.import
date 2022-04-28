@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ping_pong_8bit_plop.ogg-1f2734c541813051d2524f63877d58d3.oggstr"
+
+[deps]
+
+source_file="res://sounds_ping_pong_8bit/ping_pong_8bit_plop.ogg"
+dest_files=[ "res://.import/ping_pong_8bit_plop.ogg-1f2734c541813051d2524f63877d58d3.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
