@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Opponent/Opponent.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Ball/Ball.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Level/Level.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 541.875, 17 )
@@ -11,6 +12,7 @@ extents = Vector2( 541.875, 17 )
 extents = Vector2( 299.5, 17.5 )
 
 [node name="Level" type="Node"]
+script = ExtResource( 4 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -67,3 +69,6 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom"]
 position = Vector2( 300.5, -18 )
 shape = SubResource( 2 )
+
+[connection signal="body_entered" from="Top" to="." method="_on_Top_body_entered"]
+[connection signal="body_entered" from="Bottom" to="." method="_on_Bottom_body_entered"]
