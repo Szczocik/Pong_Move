@@ -5,18 +5,14 @@
 [ext_resource path="res://Ball/Ball.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Level/Level.gd" type="Script" id=4]
 [ext_resource path="res://kirifont/KiriFont.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://sounds_ping_pong_8bit/ping_pong_8bit_plop.ogg" type="AudioStream" id=6]
 
 [sub_resource type="DynamicFont" id=3]
 size = 40
 font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=4]
-size = 40
-outline_color = Color( 0.823529, 0.054902, 0.054902, 1 )
-font_data = ExtResource( 5 )
-
 [sub_resource type="DynamicFont" id=5]
-size = 30
+size = 50
 font_data = ExtResource( 5 )
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -39,7 +35,7 @@ __meta__ = {
 [node name="PlayerScore" type="Label" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_bottom = 200.0
+margin_bottom = 400.0
 custom_fonts/font = SubResource( 3 )
 text = "text"
 align = 1
@@ -48,23 +44,10 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="OpponentScore" type="Label" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_bottom = -200.0
-custom_fonts/font = SubResource( 4 )
-text = "text"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="CountdownLabel" type="Label" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -350.0
+margin_bottom = -400.0
 custom_fonts/font = SubResource( 5 )
 text = "Countdown"
 align = 1
@@ -124,6 +107,9 @@ shape = SubResource( 2 )
 [node name="CountdownTimer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
+
+[node name="ScoreSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
 
 [connection signal="body_entered" from="Top" to="." method="_on_Top_body_entered"]
 [connection signal="body_entered" from="Bottom" to="." method="_on_Bottom_body_entered"]
