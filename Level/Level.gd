@@ -1,5 +1,11 @@
 extends Node
 
+onready var screenWidth = get_tree().get_root().size.x
+onready var screenHeight = get_tree().get_root().size.y
+onready var halfScreenWidth = screenWidth/2
+onready var halfScreenHeight = screenHeight/2
+
+
 var PlayerScore = 3
 
 
