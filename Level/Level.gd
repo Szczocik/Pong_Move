@@ -1,9 +1,5 @@
 extends Node
 
-onready var screenWidth = get_tree().get_root().size.x
-onready var screenHeight = get_tree().get_root().size.y
-onready var halfScreenWidth = screenWidth/2
-onready var halfScreenHeight = screenHeight/2
 
 
 var PlayerScore = 3
@@ -26,6 +22,11 @@ func _on_Top_body_entered(body):
 	$CountdownTimer.start()
 	$CountdownLabel.visible = true
 	$ScoreSound.play()
+	if PlayerScore > 4:
+		get_tree().call_group("BallGroup","speed_ball")
+	elif PlayerScore > 6:
+		get_tree().call_group("BallGroup","restart_ball")
+		
 
 func _process(delta):
 	$PlayerScore.text = str(PlayerScore)

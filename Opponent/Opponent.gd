@@ -18,3 +18,4 @@ func get_opponent_direction():
 		else: return -1
 	else: return 0
 	
+

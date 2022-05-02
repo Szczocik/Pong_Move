@@ -17,6 +17,10 @@ func _physics_process(delta):
 
 func stop_ball():
 	speed = 0
+	
+
+func speed_ball():
+	speed = 600
 
 
 func restart_ball():
