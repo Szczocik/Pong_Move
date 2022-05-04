@@ -24,8 +24,8 @@ func _on_Top_body_entered(body):
 	$ScoreSound.play()
 	if PlayerScore > 4:
 		get_tree().call_group("BallGroup","speed_ball")
-	elif PlayerScore > 6:
-		get_tree().call_group("BallGroup","restart_ball")
+	elif PlayerScore == 10:
+		get_tree().change_scene("res://Level/Game_over.tscn")
 		
 
 func _process(delta):
