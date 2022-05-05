@@ -26,7 +26,7 @@ func _on_Top_body_entered(body):
 		get_tree().call_group("BallGroup","speed_ball")
 	
 	if PlayerScore == 10:
-		get_tree().change_scene("res://Level/Game_over.tscn")
+		get_tree().change_scene("res://Level/Level_End.tscn")
 		
 
 func _process(delta):
