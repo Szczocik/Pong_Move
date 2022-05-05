@@ -111,6 +111,8 @@ one_shot = true
 [node name="ScoreSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
 
+[node name="GUI" type="CanvasLayer" parent="."]
+
 [connection signal="body_entered" from="Top" to="." method="_on_Top_body_entered"]
 [connection signal="body_entered" from="Bottom" to="." method="_on_Bottom_body_entered"]
 [connection signal="timeout" from="CountdownTimer" to="." method="_on_CountdownTimer_timeout"]
