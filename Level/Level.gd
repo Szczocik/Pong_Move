@@ -5,6 +5,7 @@ extends Node
 var PlayerScore = 3
 
 
+
 func _on_Bottom_body_entered(body):
 	$Ball.position = Vector2(300,512)
 	PlayerScore -= 1
@@ -26,7 +27,8 @@ func _on_Top_body_entered(body):
 		get_tree().call_group("BallGroup","speed_ball")
 	
 	if PlayerScore == 10:
-		get_tree().change_scene("res://Level/Level_End.tscn")
+		get_tree().change_scene("res://Level_1/Level_1.tscn")
+		PlayerScore 
 		
 
 func _process(delta):
