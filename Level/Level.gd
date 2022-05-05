@@ -4,6 +4,9 @@ extends Node
 
 var PlayerScore = 3
 
+func _ready():
+	add_to_group("Gamestate")
+
 
 
 func _on_Bottom_body_entered(body):
