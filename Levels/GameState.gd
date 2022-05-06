@@ -9,8 +9,6 @@ func _ready():
 	update_GUI()
 	
 
-
-
 func _on_Bottom_body_entered(body):
 	$Ball.position = Vector2(300,512)
 	PlayerScore -= 1
@@ -34,9 +32,13 @@ func _on_Top_body_entered(body):
 		get_tree().call_group("BallGroup","speed_ball")
 		update_GUI()
 	
-	if PlayerScore == 10:
-		get_tree().change_scene("res://Levels/Level_1.tscn")
+	if PlayerScore >= 10:
+		get_tree().change_scene("res://Levels/Level_End.tscn")
 		update_GUI() 
+
+func coin_up():
+	PlayerScore += 1
+	update_GUI()
 
 
 func update_GUI():

@@ -1,5 +1,6 @@
 extends CanvasLayer
 
+
 func _ready():
 	$Control/TextureRect/HBoxContainer/PlayerScore.text = "3"
 	
