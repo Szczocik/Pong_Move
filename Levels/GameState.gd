@@ -4,6 +4,7 @@ extends Node
 
 var PlayerScore = 8
 
+
 func _ready():
 	add_to_group("Gamestate")
 	update_GUI()
@@ -32,9 +33,20 @@ func _on_Top_body_entered(body):
 		get_tree().call_group("BallGroup","speed_ball")
 		update_GUI()
 	
-	if PlayerScore >= 10:
-		get_tree().change_scene("res://Levels/Level_End.tscn")
-		update_GUI() 
+	if PlayerScore == 10:
+		update_GUI()
+		get_tree().change_scene("res://Levels/Level_" + str(int(get_tree().current_scene.name) + 1) + ".tscn")
+	
+		
+
+func chenge_scene_1():
+	get_tree().change_scene("res://Levels/Level_1.tscn")
+	update_GUI()
+
+
+func chenge_scene_2():
+	get_tree().change_scene("res://Levels/Level_1.tscn")
+	update_GUI()
 
 func coin_up():
 	PlayerScore += 1
