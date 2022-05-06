@@ -2,7 +2,7 @@ extends Node
 
 
 
-var PlayerScore = 8
+var PlayerScore = 5
 
 
 func _ready():
@@ -29,28 +29,25 @@ func _on_Top_body_entered(body):
 	$CountdownTimer.start()
 	$CountdownLabel.visible = true
 	$ScoreSound.play()
-	if PlayerScore > 4:
+	if PlayerScore > 7:
 		get_tree().call_group("BallGroup","speed_ball")
 		update_GUI()
 	
 	if PlayerScore == 10:
 		update_GUI()
-		get_tree().change_scene("res://Levels/Level_" + str(int(get_tree().current_scene.name) + 1) + ".tscn")
-	
+		change_scene()
 		
-
-func chenge_scene_1():
-	get_tree().change_scene("res://Levels/Level_1.tscn")
-	update_GUI()
-
-
-func chenge_scene_2():
-	get_tree().change_scene("res://Levels/Level_1.tscn")
-	update_GUI()
-
+	if PlayerScore == 20:
+		game_over()
+		
+	
 func coin_up():
 	PlayerScore += 1
 	update_GUI()
+	
+	
+func change_scene():
+	get_tree().change_scene("res://Levels/Level_" + str(int(get_tree().current_scene.name) + 1) + ".tscn")
 
 
 func update_GUI():

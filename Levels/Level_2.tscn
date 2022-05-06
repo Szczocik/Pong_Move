@@ -19,7 +19,7 @@ extents = Vector2( 541.875, 17 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 299.5, 17.5 )
 
-[node name="Level_1" type="Node"]
+[node name="Level_2" type="Node"]
 script = ExtResource( 4 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
