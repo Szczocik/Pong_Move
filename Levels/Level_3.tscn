@@ -2,7 +2,7 @@
 
 [ext_resource path="res://kirifont/KiriFont.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://sounds_ping_pong_8bit/ping_pong_8bit_plop.ogg" type="AudioStream" id=2]
-[ext_resource path="res://Items/Cloud.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Items/Coin2.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Levels/GameState.gd" type="Script" id=4]
 [ext_resource path="res://Ball/Ball.tscn" type="PackedScene" id=5]
 [ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=6]
@@ -19,7 +19,7 @@ extents = Vector2( 541.875, 17 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 299.5, 17.5 )
 
-[node name="Level_2" type="Node"]
+[node name="Level_3" type="Node"]
 script = ExtResource( 4 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -99,7 +99,41 @@ stream = ExtResource( 2 )
 
 [node name="GUI" parent="." instance=ExtResource( 6 )]
 
-[node name="Cloud" parent="." instance=ExtResource( 3 )]
+[node name="Coin" parent="." instance=ExtResource( 3 )]
+position = Vector2( 72, 248 )
+
+[node name="Coin2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 226, 248 )
+
+[node name="Coin3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 374, 246 )
+
+[node name="Coin4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 506, 248 )
+
+[node name="Coin5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 70, 390 )
+
+[node name="Coin6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 224, 388 )
+
+[node name="Coin7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 374, 390 )
+
+[node name="Coin8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 514, 396 )
+
+[node name="Coin9" parent="." instance=ExtResource( 3 )]
+position = Vector2( 70, 488 )
+
+[node name="Coin10" parent="." instance=ExtResource( 3 )]
+position = Vector2( 223, 488 )
+
+[node name="Coin11" parent="." instance=ExtResource( 3 )]
+position = Vector2( 509, 495 )
+
+[node name="Coin12" parent="." instance=ExtResource( 3 )]
+position = Vector2( 377, 491 )
 
 [connection signal="body_entered" from="Top" to="." method="_on_Top_body_entered"]
 [connection signal="body_entered" from="Bottom" to="." method="_on_Bottom_body_entered"]

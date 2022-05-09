@@ -1,8 +1,7 @@
 extends Node
 
 
-
-var PlayerScore = 5
+var PlayerScore = 9
 
 
 func _ready():
