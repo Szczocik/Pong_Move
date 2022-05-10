@@ -14,10 +14,10 @@ size = 50
 font_data = ExtResource( 1 )
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 541.875, 17 )
+extents = Vector2( 581.969, 17 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 299.5, 17.5 )
+extents = Vector2( 968, 17.5 )
 
 [node name="Level_3" type="Node"]
 script = ExtResource( 4 )
@@ -50,18 +50,18 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft"]
-position = Vector2( -17, 505 )
+position = Vector2( -17.0001, 530.062 )
 rotation = 1.5708
 shape = SubResource( 1 )
 
 [node name="WallRight" type="StaticBody2D" parent="."]
-position = Vector2( 635, 0 )
+position = Vector2( 1955, 24 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight"]
-position = Vector2( -17, 505 )
+position = Vector2( -17.0001, 520.031 )
 rotation = 1.5708
 shape = SubResource( 1 )
 
@@ -77,11 +77,11 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Top"]
-position = Vector2( 300.5, -18 )
+position = Vector2( 969, -18 )
 shape = SubResource( 2 )
 
 [node name="Bottom" type="Area2D" parent="."]
-position = Vector2( 0, 1060 )
+position = Vector2( 657, 1115 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -103,37 +103,88 @@ stream = ExtResource( 2 )
 position = Vector2( 72, 248 )
 
 [node name="Coin2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 226, 248 )
+position = Vector2( 298, 222 )
 
 [node name="Coin3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 374, 246 )
+position = Vector2( 553, 206 )
 
 [node name="Coin4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 506, 248 )
+position = Vector2( 813, 245 )
 
 [node name="Coin5" parent="." instance=ExtResource( 3 )]
-position = Vector2( 70, 390 )
+position = Vector2( 123, 433 )
 
 [node name="Coin6" parent="." instance=ExtResource( 3 )]
-position = Vector2( 224, 388 )
+position = Vector2( 232, 343 )
 
 [node name="Coin7" parent="." instance=ExtResource( 3 )]
-position = Vector2( 374, 390 )
+position = Vector2( 494, 334 )
+
+[node name="Coin16" parent="." instance=ExtResource( 3 )]
+position = Vector2( 870, 529 )
+
+[node name="Coin17" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1033, 225 )
+
+[node name="Coin18" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1017, 391 )
+
+[node name="Coin19" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1129, 589 )
+
+[node name="Coin20" parent="." instance=ExtResource( 3 )]
+position = Vector2( 955, 701 )
+
+[node name="Coin21" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1323, 426 )
+
+[node name="Coin22" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1435, 228 )
+
+[node name="Coin23" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1555, 506 )
+
+[node name="Coin24" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1616, 324 )
+
+[node name="Coin25" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1782, 199 )
+
+[node name="Coin26" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1809, 461 )
+
+[node name="Coin27" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1745, 709 )
+
+[node name="Coin28" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1377, 621 )
+
+[node name="Coin29" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1532, 733 )
 
 [node name="Coin8" parent="." instance=ExtResource( 3 )]
-position = Vector2( 514, 396 )
+position = Vector2( 477, 465 )
 
 [node name="Coin9" parent="." instance=ExtResource( 3 )]
-position = Vector2( 70, 488 )
+position = Vector2( 126, 651 )
 
 [node name="Coin10" parent="." instance=ExtResource( 3 )]
-position = Vector2( 223, 488 )
+position = Vector2( 276, 611 )
 
 [node name="Coin11" parent="." instance=ExtResource( 3 )]
-position = Vector2( 509, 495 )
+position = Vector2( 477, 628 )
 
 [node name="Coin12" parent="." instance=ExtResource( 3 )]
-position = Vector2( 377, 491 )
+position = Vector2( 1234, 251 )
+
+[node name="Coin13" parent="." instance=ExtResource( 3 )]
+position = Vector2( 318, 481 )
+
+[node name="Coin14" parent="." instance=ExtResource( 3 )]
+position = Vector2( 655, 398 )
+
+[node name="Coin15" parent="." instance=ExtResource( 3 )]
+position = Vector2( 652, 622 )
 
 [connection signal="body_entered" from="Top" to="." method="_on_Top_body_entered"]
 [connection signal="body_entered" from="Bottom" to="." method="_on_Bottom_body_entered"]

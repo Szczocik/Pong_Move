@@ -14,10 +14,10 @@ size = 50
 font_data = ExtResource( 1 )
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 541.875, 17 )
+extents = Vector2( 573.719, 17 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 299.5, 17.5 )
+extents = Vector2( 967.5, 17.5 )
 
 [node name="Level_2" type="Node"]
 script = ExtResource( 4 )
@@ -52,18 +52,18 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft"]
-position = Vector2( -17, 505 )
+position = Vector2( -17.0001, 523.562 )
 rotation = 1.5708
 shape = SubResource( 1 )
 
 [node name="WallRight" type="StaticBody2D" parent="."]
-position = Vector2( 635, 0 )
+position = Vector2( 1955, 27 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight"]
-position = Vector2( -17, 505 )
+position = Vector2( -17.0001, 518.281 )
 rotation = 1.5708
 shape = SubResource( 1 )
 
@@ -80,11 +80,11 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Top"]
-position = Vector2( 300.5, -18 )
+position = Vector2( 968.5, -18 )
 shape = SubResource( 2 )
 
 [node name="Bottom" type="Area2D" parent="."]
-position = Vector2( 0, 1060 )
+position = Vector2( 665, 1115 )
 collision_layer = 16
 collision_mask = 5
 __meta__ = {
@@ -105,6 +105,18 @@ stream = ExtResource( 2 )
 [node name="GUI" parent="." instance=ExtResource( 6 )]
 
 [node name="Cloud" parent="." instance=ExtResource( 3 )]
+
+[node name="Cloud2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 287, -1599 )
+
+[node name="Cloud3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1643, -1013 )
+
+[node name="Cloud4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1804, -2686 )
+
+[node name="Cloud5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 693, -2500 )
 
 [connection signal="body_entered" from="Top" to="." method="_on_Top_body_entered"]
 [connection signal="body_entered" from="Bottom" to="." method="_on_Bottom_body_entered"]

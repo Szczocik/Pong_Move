@@ -9,7 +9,7 @@ func _ready():
 	
 
 func _on_Bottom_body_entered(body):
-	$Ball.position = Vector2(300,512)
+	$Ball.position = Vector2(960,540)
 	PlayerScore -= 1
 	update_GUI()
 	if PlayerScore <= 0:
@@ -20,7 +20,7 @@ func _on_Bottom_body_entered(body):
 	$ScoreSound.play()
 
 func _on_Top_body_entered(body):
-	$Ball.position = Vector2(300,512)
+	$Ball.position = Vector2(960,540)
 	PlayerScore += 1
 	update_GUI()
 	get_tree().call_group("BallGroup","stop_ball")
