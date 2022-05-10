@@ -58,8 +58,16 @@ func update_GUI():
 
 
 func _process(delta):
-	#$PlayerScore.text = str(PlayerScore)
 	$CountdownLabel.text = str(int($CountdownTimer.time_left) +1)
+	
+	
+func car_spawn(start_pos):
+	var cloud = $Cloud
+	var cloud_start_node_name = "StartPositions/CloudStart" + str(start_pos)
+	cloud.position = get_node(cloud_start_node_name).position
+
+	var timer_node_name = "CloudTimer/Timer" + str(start_pos)
+	get_node(timer_node_name).wait_time = rand_range(1.6,2.2)
 
 
 func _on_CountdownTimer_timeout():

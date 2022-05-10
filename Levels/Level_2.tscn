@@ -85,6 +85,8 @@ shape = SubResource( 2 )
 
 [node name="Bottom" type="Area2D" parent="."]
 position = Vector2( 0, 1060 )
+collision_layer = 16
+collision_mask = 5
 __meta__ = {
 "_edit_group_": true
 }
@@ -104,6 +106,20 @@ stream = ExtResource( 2 )
 
 [node name="Cloud" parent="." instance=ExtResource( 3 )]
 collision_mask = 8
+
+[node name="StartPositions" type="Node" parent="."]
+
+[node name="CloudStart1" type="Position2D" parent="StartPositions"]
+position = Vector2( 83, -52 )
+
+[node name="CloudStart2" type="Position2D" parent="StartPositions"]
+position = Vector2( 492, -50 )
+
+[node name="CloudTimer" type="Node" parent="."]
+
+[node name="Timer1" type="Timer" parent="CloudTimer"]
+
+[node name="Timer2" type="Timer" parent="CloudTimer"]
 
 [connection signal="body_entered" from="Top" to="." method="_on_Top_body_entered"]
 [connection signal="body_entered" from="Bottom" to="." method="_on_Bottom_body_entered"]
