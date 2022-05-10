@@ -44,6 +44,10 @@ func coin_up():
 	PlayerScore += 1
 	update_GUI()
 	
+func coin_down():
+	PlayerScore -= 3
+	update_GUI()
+	
 	
 func change_scene():
 	get_tree().change_scene("res://Levels/Level_" + str(int(get_tree().current_scene.name) + 1) + ".tscn")
