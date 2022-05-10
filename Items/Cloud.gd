@@ -12,4 +12,5 @@ func _process(delta):
 
 func _on_Cloud_body_entered(body):
 	get_tree().call_group("Gamestate", "coin_down")
+
 	
