@@ -57,8 +57,14 @@ func coin_up():
 	PlayerScore += 1
 	update_GUI()
 	
+	
 func coin_down():
 	PlayerScore -= 3
+	update_GUI()
+	
+	
+func portal_up():
+	PlayerScore += 3
 	update_GUI()
 	
 	
