@@ -3,6 +3,7 @@ extends Node
 var PlayerScore = 3
 
 
+
 func _ready():
 	add_to_group("Gamestate")
 	update_GUI()
@@ -38,7 +39,15 @@ func _on_Top_body_entered(body):
 	if PlayerScore == 20:
 		game_over()
 		
+func cloud_spawn(start_pos):
+	var cloud = load("res://Items/Cloud.tscn")
+	var cloud_start_node_name = "StartPositions/CloudStart" + str(start_pos)
+	cloud.position = get_node(cloud_start_node_name).position
 	
+	var timer_node_name = "CarTimer/Timer" + str(start_pos)
+	get_node(timer_node_name).wait_time = rand_range(1.6,2.2)
+
+
 func coin_up():
 	PlayerScore += 1
 	update_GUI()

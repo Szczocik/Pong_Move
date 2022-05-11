@@ -105,18 +105,26 @@ stream = ExtResource( 2 )
 [node name="GUI" parent="." instance=ExtResource( 6 )]
 
 [node name="Cloud" parent="." instance=ExtResource( 3 )]
+position = Vector2( 412, -264 )
 
-[node name="Cloud2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 287, -1599 )
+[node name="StartPositions" type="Node" parent="."]
 
-[node name="Cloud3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1643, -1013 )
+[node name="CloudStart1" type="Position2D" parent="StartPositions"]
+position = Vector2( 225, -189 )
 
-[node name="Cloud4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1804, -2686 )
+[node name="CloudStart2" type="Position2D" parent="StartPositions"]
+position = Vector2( 923, -342 )
 
-[node name="Cloud5" parent="." instance=ExtResource( 3 )]
-position = Vector2( 693, -2500 )
+[node name="CloudStart3" type="Position2D" parent="StartPositions"]
+position = Vector2( 1615, -588 )
+
+[node name="CloudTimer" type="Node" parent="."]
+
+[node name="Timer1" type="Timer" parent="CloudTimer"]
+
+[node name="Timer2" type="Timer" parent="CloudTimer"]
+
+[node name="Timer3" type="Timer" parent="CloudTimer"]
 
 [connection signal="body_entered" from="Top" to="." method="_on_Top_body_entered"]
 [connection signal="body_entered" from="Bottom" to="." method="_on_Bottom_body_entered"]
