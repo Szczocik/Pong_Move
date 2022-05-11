@@ -1,5 +1,7 @@
 extends Node
 
+const CLOUD = preload("res://Items/Cloud.tscn")
+
 var PlayerScore = 3
 
 
@@ -40,12 +42,15 @@ func _on_Top_body_entered(body):
 		game_over()
 		
 func cloud_spawn(start_pos):
-	var cloud = load("res://Items/Cloud.tscn")
+	var cloud = CLOUD.instance()
 	var cloud_start_node_name = "StartPositions/CloudStart" + str(start_pos)
 	cloud.position = get_node(cloud_start_node_name).position
+	add_child(cloud)
 	
-	var timer_node_name = "CarTimer/Timer" + str(start_pos)
-	get_node(timer_node_name).wait_time = rand_range(1.6,2.2)
+	
+	var timer_node_name = "CloudTimer/Timer" + str(start_pos)
+	get_node(timer_node_name).wait_time = rand_range(10,10)
+	update_GUI()
 
 
 func coin_up():
@@ -77,4 +82,10 @@ func _on_CountdownTimer_timeout():
 
 func game_over():
 	get_tree().change_scene("res://Levels/Game_over.tscn")
+
+
+
+func _on_Timer1_timeout(): cloud_spawn(1)
+func _on_Timer2_timeout(): cloud_spawn(2)
+
 

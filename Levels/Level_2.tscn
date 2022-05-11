@@ -105,27 +105,27 @@ stream = ExtResource( 2 )
 [node name="GUI" parent="." instance=ExtResource( 6 )]
 
 [node name="Cloud" parent="." instance=ExtResource( 3 )]
-position = Vector2( 412, -264 )
+visible = false
+position = Vector2( 472, -498 )
 
 [node name="StartPositions" type="Node" parent="."]
 
 [node name="CloudStart1" type="Position2D" parent="StartPositions"]
-position = Vector2( 225, -189 )
+position = Vector2( 459, -225 )
 
 [node name="CloudStart2" type="Position2D" parent="StartPositions"]
-position = Vector2( 923, -342 )
-
-[node name="CloudStart3" type="Position2D" parent="StartPositions"]
-position = Vector2( 1615, -588 )
+position = Vector2( 1360, -659 )
 
 [node name="CloudTimer" type="Node" parent="."]
 
 [node name="Timer1" type="Timer" parent="CloudTimer"]
+autostart = true
 
 [node name="Timer2" type="Timer" parent="CloudTimer"]
-
-[node name="Timer3" type="Timer" parent="CloudTimer"]
+autostart = true
 
 [connection signal="body_entered" from="Top" to="." method="_on_Top_body_entered"]
 [connection signal="body_entered" from="Bottom" to="." method="_on_Bottom_body_entered"]
 [connection signal="timeout" from="CountdownTimer" to="." method="_on_CountdownTimer_timeout"]
+[connection signal="timeout" from="CloudTimer/Timer1" to="." method="_on_Timer1_timeout"]
+[connection signal="timeout" from="CloudTimer/Timer2" to="." method="_on_Timer2_timeout"]
