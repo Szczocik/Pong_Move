@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://kirifont/KiriFont.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://sounds_ping_pong_8bit/ping_pong_8bit_plop.ogg" type="AudioStream" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Opponent/Opponent.tscn" type="PackedScene" id=8]
+[ext_resource path="res://SFX/BGM1.gd" type="Script" id=9]
+[ext_resource path="res://SFX/Chiptune_Adventures_1.ogg" type="AudioStream" id=10]
 
 [sub_resource type="DynamicFont" id=5]
 size = 50
@@ -195,6 +197,12 @@ visible = false
 shape = SubResource( 6 )
 
 [node name="GUI" parent="." instance=ExtResource( 6 )]
+
+[node name="BGM1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = -7.0
+autoplay = true
+script = ExtResource( 9 )
 
 [connection signal="body_entered" from="Top" to="." method="_on_Top_body_entered"]
 [connection signal="body_entered" from="Bottom" to="." method="_on_Bottom_body_entered"]

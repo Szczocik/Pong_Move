@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://kirifont/KiriFont.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://sounds_ping_pong_8bit/ping_pong_8bit_plop.ogg" type="AudioStream" id=2]
@@ -8,6 +8,9 @@
 [ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Opponent/Opponent.tscn" type="PackedScene" id=8]
+[ext_resource path="res://SFX/BGM.tscn" type="PackedScene" id=9]
+[ext_resource path="res://SFX/BGM2.gd" type="Script" id=10]
+[ext_resource path="res://SFX/StealthintheWoods.ogg" type="AudioStream" id=11]
 
 [sub_resource type="DynamicFont" id=5]
 size = 50
@@ -126,6 +129,18 @@ autostart = true
 
 [node name="Timer2" type="Timer" parent="CloudTimer"]
 autostart = true
+
+[node name="Level" parent="." instance=ExtResource( 9 )]
+
+[node name="Level2" parent="." instance=ExtResource( 9 )]
+
+[node name="Level3" parent="." instance=ExtResource( 9 )]
+
+[node name="BGM2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = -7.0
+autoplay = true
+script = ExtResource( 10 )
 
 [connection signal="body_entered" from="Top" to="." method="_on_Top_body_entered"]
 [connection signal="body_entered" from="Bottom" to="." method="_on_Bottom_body_entered"]

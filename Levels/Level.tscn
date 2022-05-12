@@ -102,7 +102,7 @@ stream = ExtResource( 3 )
 
 [node name="BGM" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
-volume_db = -5.0
+volume_db = -7.0
 autoplay = true
 
 [connection signal="body_entered" from="Top" to="." method="_on_Top_body_entered"]

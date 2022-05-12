@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Cyber_Space_Hunters.ogg-faad4b16c81b9b4e87f45cbe95fd617e.oggstr"
+
+[deps]
+
+source_file="res://SFX/Cyber_Space_Hunters.ogg"
+dest_files=[ "res://.import/Cyber_Space_Hunters.ogg-faad4b16c81b9b4e87f45cbe95fd617e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

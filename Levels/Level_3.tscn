@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://kirifont/KiriFont.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://sounds_ping_pong_8bit/ping_pong_8bit_plop.ogg" type="AudioStream" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Opponent/Opponent.tscn" type="PackedScene" id=8]
+[ext_resource path="res://SFX/Cyber_Space_Hunters.ogg" type="AudioStream" id=9]
+[ext_resource path="res://SFX/BGM3.gd" type="Script" id=10]
 
 [sub_resource type="DynamicFont" id=5]
 size = 50
@@ -107,6 +109,12 @@ position = Vector2( 550, 460 )
 
 [node name="Portal2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1370, 460 )
+
+[node name="BGM3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = -4.0
+autoplay = true
+script = ExtResource( 10 )
 
 [connection signal="body_entered" from="Top" to="." method="_on_Top_body_entered"]
 [connection signal="body_entered" from="Bottom" to="." method="_on_Bottom_body_entered"]

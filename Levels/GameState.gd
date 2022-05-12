@@ -2,7 +2,7 @@ extends Node
 
 const CLOUD = preload("res://Items/Cloud.tscn")
 
-var PlayerScore = 6
+var PlayerScore = 8
 
 
 
@@ -38,7 +38,9 @@ func _on_Top_body_entered(body):
 		update_GUI()
 		change_scene()
 		
+		
 	if PlayerScore == 20:
+		update_GUI()
 		game_over()
 		
 func cloud_spawn(start_pos):

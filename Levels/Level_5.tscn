@@ -1,13 +1,15 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://kirifont/KiriFont.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://sounds_ping_pong_8bit/ping_pong_8bit_plop.ogg" type="AudioStream" id=2]
-[ext_resource path="res://assets/Sun.tscn" type="PackedScene" id=3]
+[ext_resource path="res://SFX/Summer_Park.ogg" type="AudioStream" id=3]
 [ext_resource path="res://Levels/GameState.gd" type="Script" id=4]
 [ext_resource path="res://Ball/Ball.tscn" type="PackedScene" id=5]
 [ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Opponent/Opponent.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Items/Coin2.tscn" type="PackedScene" id=9]
+[ext_resource path="res://SFX/BGM4.gd" type="Script" id=10]
 
 [sub_resource type="DynamicFont" id=5]
 size = 50
@@ -25,7 +27,7 @@ script = ExtResource( 4 )
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.0627451, 0.0862745, 0.227451, 1 )
+color = Color( 0.45098, 0.0941176, 0.0470588, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -43,6 +45,7 @@ __meta__ = {
 }
 
 [node name="Player" parent="." instance=ExtResource( 7 )]
+modulate = Color( 0.113725, 0.839216, 0.568627, 1 )
 
 [node name="WallLeft" type="StaticBody2D" parent="."]
 __meta__ = {
@@ -66,9 +69,11 @@ rotation = 1.5708
 shape = SubResource( 1 )
 
 [node name="Opponent" parent="." instance=ExtResource( 8 )]
+modulate = Color( 0.113725, 0.839216, 0.568627, 1 )
 position = Vector2( 960, 80 )
 
 [node name="Ball" parent="." instance=ExtResource( 5 )]
+modulate = Color( 0.113725, 0.839216, 0.568627, 1 )
 position = Vector2( 300, 512 )
 
 [node name="Top" type="Area2D" parent="."]
@@ -99,11 +104,98 @@ stream = ExtResource( 2 )
 
 [node name="GUI" parent="." instance=ExtResource( 6 )]
 
-[node name="Sun" parent="." instance=ExtResource( 3 )]
-position = Vector2( 549, 515 )
+[node name="Coin" parent="." instance=ExtResource( 9 )]
+position = Vector2( 72, 248 )
 
-[node name="Sun2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1417, 519 )
+[node name="Coin2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 298, 222 )
+
+[node name="Coin3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 553, 206 )
+
+[node name="Coin4" parent="." instance=ExtResource( 9 )]
+position = Vector2( 813, 245 )
+
+[node name="Coin5" parent="." instance=ExtResource( 9 )]
+position = Vector2( 123, 433 )
+
+[node name="Coin6" parent="." instance=ExtResource( 9 )]
+position = Vector2( 232, 343 )
+
+[node name="Coin7" parent="." instance=ExtResource( 9 )]
+position = Vector2( 494, 334 )
+
+[node name="Coin16" parent="." instance=ExtResource( 9 )]
+position = Vector2( 870, 529 )
+
+[node name="Coin17" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1033, 225 )
+
+[node name="Coin18" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1017, 391 )
+
+[node name="Coin19" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1129, 589 )
+
+[node name="Coin20" parent="." instance=ExtResource( 9 )]
+position = Vector2( 955, 701 )
+
+[node name="Coin21" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1323, 426 )
+
+[node name="Coin22" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1435, 228 )
+
+[node name="Coin23" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1555, 506 )
+
+[node name="Coin24" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1616, 324 )
+
+[node name="Coin25" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1782, 199 )
+
+[node name="Coin26" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1809, 461 )
+
+[node name="Coin27" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1745, 709 )
+
+[node name="Coin28" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1377, 621 )
+
+[node name="Coin29" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1532, 733 )
+
+[node name="Coin8" parent="." instance=ExtResource( 9 )]
+position = Vector2( 477, 465 )
+
+[node name="Coin9" parent="." instance=ExtResource( 9 )]
+position = Vector2( 126, 651 )
+
+[node name="Coin10" parent="." instance=ExtResource( 9 )]
+position = Vector2( 276, 611 )
+
+[node name="Coin11" parent="." instance=ExtResource( 9 )]
+position = Vector2( 477, 628 )
+
+[node name="Coin12" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1234, 251 )
+
+[node name="Coin13" parent="." instance=ExtResource( 9 )]
+position = Vector2( 318, 481 )
+
+[node name="Coin14" parent="." instance=ExtResource( 9 )]
+position = Vector2( 655, 398 )
+
+[node name="Coin15" parent="." instance=ExtResource( 9 )]
+position = Vector2( 652, 622 )
+
+[node name="BGM4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -7.0
+autoplay = true
+script = ExtResource( 10 )
 
 [connection signal="body_entered" from="Top" to="." method="_on_Top_body_entered"]
 [connection signal="body_entered" from="Bottom" to="." method="_on_Bottom_body_entered"]
