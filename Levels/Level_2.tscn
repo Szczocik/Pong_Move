@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://kirifont/KiriFont.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://sounds_ping_pong_8bit/ping_pong_8bit_plop.ogg" type="AudioStream" id=2]
@@ -8,19 +8,17 @@
 [ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Opponent/Opponent.tscn" type="PackedScene" id=8]
-[ext_resource path="res://SFX/BGM.tscn" type="PackedScene" id=9]
-[ext_resource path="res://SFX/BGM2.gd" type="Script" id=10]
-[ext_resource path="res://SFX/StealthintheWoods.ogg" type="AudioStream" id=11]
+[ext_resource path="res://SFX/BGM2.gd" type="Script" id=9]
 
 [sub_resource type="DynamicFont" id=5]
 size = 50
 font_data = ExtResource( 1 )
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 573.719, 17 )
+extents = Vector2( 581.969, 17 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 967.5, 17.5 )
+extents = Vector2( 971, 17.5 )
 
 [node name="Level_2" type="Node"]
 script = ExtResource( 4 )
@@ -28,7 +26,7 @@ script = ExtResource( 4 )
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.0235294, 0.27451, 0.541176, 1 )
+color = Color( 0.027451, 0.337255, 0.458824, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -46,7 +44,7 @@ __meta__ = {
 }
 
 [node name="Player" parent="." instance=ExtResource( 7 )]
-modulate = Color( 0.0784314, 0.0156863, 0.45098, 1 )
+modulate = Color( 0.211765, 0.886275, 0.0941176, 1 )
 collision_layer = 8
 collision_mask = 5
 
@@ -56,29 +54,30 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft"]
-position = Vector2( -17.0001, 523.562 )
+position = Vector2( -17.0001, 529.062 )
 rotation = 1.5708
 shape = SubResource( 1 )
 
 [node name="WallRight" type="StaticBody2D" parent="."]
-position = Vector2( 1955, 27 )
+position = Vector2( 1955, 5 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight"]
-position = Vector2( -17.0001, 518.281 )
+position = Vector2( -17.0001, 521.031 )
 rotation = 1.5708
 shape = SubResource( 1 )
 
 [node name="Opponent" parent="." instance=ExtResource( 8 )]
-modulate = Color( 0.0784314, 0.0156863, 0.45098, 1 )
+modulate = Color( 0.211765, 0.886275, 0.0941176, 1 )
 position = Vector2( 960, 80 )
+collision_layer = 16
 
 [node name="Ball" parent="." instance=ExtResource( 5 )]
-modulate = Color( 0.0784314, 0.0156863, 0.45098, 1 )
+modulate = Color( 0.211765, 0.886275, 0.0941176, 1 )
 position = Vector2( 300, 512 )
-collision_mask = 0
+collision_mask = 24
 
 [node name="Top" type="Area2D" parent="."]
 __meta__ = {
@@ -86,13 +85,11 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Top"]
-position = Vector2( 968.5, -18 )
+position = Vector2( 972, -18 )
 shape = SubResource( 2 )
 
 [node name="Bottom" type="Area2D" parent="."]
-position = Vector2( 665, 1115 )
-collision_layer = 16
-collision_mask = 5
+position = Vector2( 662, 1115 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -112,35 +109,27 @@ stream = ExtResource( 2 )
 
 [node name="Cloud" parent="." instance=ExtResource( 3 )]
 visible = false
-position = Vector2( 472, -498 )
 
 [node name="StartPositions" type="Node" parent="."]
 
 [node name="CloudStart1" type="Position2D" parent="StartPositions"]
-position = Vector2( 459, -225 )
+position = Vector2( 286, -224 )
 
 [node name="CloudStart2" type="Position2D" parent="StartPositions"]
-position = Vector2( 1360, -659 )
+position = Vector2( 1485, -563 )
 
 [node name="CloudTimer" type="Node" parent="."]
 
 [node name="Timer1" type="Timer" parent="CloudTimer"]
+wait_time = 2.0
 autostart = true
 
 [node name="Timer2" type="Timer" parent="CloudTimer"]
+wait_time = 2.0
 autostart = true
 
-[node name="Level" parent="." instance=ExtResource( 9 )]
-
-[node name="Level2" parent="." instance=ExtResource( 9 )]
-
-[node name="Level3" parent="." instance=ExtResource( 9 )]
-
 [node name="BGM2" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 11 )
-volume_db = -7.0
-autoplay = true
-script = ExtResource( 10 )
+script = ExtResource( 9 )
 
 [connection signal="body_entered" from="Top" to="." method="_on_Top_body_entered"]
 [connection signal="body_entered" from="Bottom" to="." method="_on_Bottom_body_entered"]

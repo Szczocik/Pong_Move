@@ -2,7 +2,7 @@ extends Node
 
 const CLOUD = preload("res://Items/Cloud.tscn")
 
-var PlayerScore = 8
+var PlayerScore = 9
 
 
 
