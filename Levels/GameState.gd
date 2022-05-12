@@ -2,7 +2,7 @@ extends Node
 
 const CLOUD = preload("res://Items/Cloud.tscn")
 
-var PlayerScore = 3
+var PlayerScore = 6
 
 
 
@@ -59,26 +59,19 @@ func coin_up():
 	
 	
 func coin_down():
-	PlayerScore -= 3
+	PlayerScore -= 2
 	update_GUI()
 	
 	
 func portal_up():
-	PlayerScore += 3
+	PlayerScore += 2
 	update_GUI()
 	get_tree().call_group("BallGroup","stop_ball")
 	$Ball.visible = false
 	$Ball.position = Vector2(960,540)
 	$Ball.visible = true
+	get_tree().call_group("BallGroup","restart_ball")
 	_on_CountdownTimer_timeout()
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 func change_scene():
@@ -93,7 +86,6 @@ func _process(delta):
 	$CountdownLabel.text = str(int($CountdownTimer.time_left) +1)
 	
 
-
 func _on_CountdownTimer_timeout():
 	get_tree().call_group("BallGroup","restart_ball")
 	$CountdownLabel.visible = false
@@ -101,7 +93,6 @@ func _on_CountdownTimer_timeout():
 
 func game_over():
 	get_tree().change_scene("res://Levels/Game_over.tscn")
-
 
 
 func _on_Timer1_timeout(): cloud_spawn(1)

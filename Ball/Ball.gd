@@ -21,8 +21,8 @@ func stop_ball():
 
 func speed_ball():
 	speed = 600
-
-
+	
+	
 func restart_ball():
 	speed = 400
 	velocity.x = [-0.8,0.8][randi() % 2]
