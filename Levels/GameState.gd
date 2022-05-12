@@ -66,6 +66,19 @@ func coin_down():
 func portal_up():
 	PlayerScore += 3
 	update_GUI()
+	get_tree().call_group("BallGroup","stop_ball")
+	$Ball.visible = false
+	$Ball.position = Vector2(960,540)
+	$Ball.visible = true
+	_on_CountdownTimer_timeout()
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 func change_scene():
