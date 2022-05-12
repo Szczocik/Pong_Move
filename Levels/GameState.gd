@@ -47,7 +47,6 @@ func cloud_spawn(start_pos):
 	cloud.position = get_node(cloud_start_node_name).position
 	add_child(cloud)
 	
-	
 	var timer_node_name = "CloudTimer/Timer" + str(start_pos)
 	get_node(timer_node_name).wait_time = rand_range(10,10)
 	update_GUI()

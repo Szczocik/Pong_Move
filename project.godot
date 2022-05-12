@@ -28,6 +28,7 @@ window/stretch/aspect="keep"
 2d_physics/layer_3="Cloud"
 2d_physics/layer_4="Player"
 2d_physics/layer_5="BottomWall"
+2d_physics/layer_6="JumpPad"
 
 [physics]
 

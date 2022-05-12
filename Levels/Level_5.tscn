@@ -1,8 +1,7 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://kirifont/KiriFont.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://sounds_ping_pong_8bit/ping_pong_8bit_plop.ogg" type="AudioStream" id=2]
-[ext_resource path="res://Items/Portal.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Levels/GameState.gd" type="Script" id=4]
 [ext_resource path="res://Ball/Ball.tscn" type="PackedScene" id=5]
 [ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=6]
@@ -25,7 +24,7 @@ script = ExtResource( 4 )
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.321569, 0.0784314, 0.294118, 1 )
+color = Color( 0.0784314, 0.129412, 0.14902, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -98,12 +97,6 @@ one_shot = true
 stream = ExtResource( 2 )
 
 [node name="GUI" parent="." instance=ExtResource( 6 )]
-
-[node name="Portal" parent="." instance=ExtResource( 3 )]
-position = Vector2( 550, 460 )
-
-[node name="Portal2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1370, 460 )
 
 [connection signal="body_entered" from="Top" to="." method="_on_Top_body_entered"]
 [connection signal="body_entered" from="Bottom" to="." method="_on_Bottom_body_entered"]
