@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/sun1.png" type="Texture" id=1]
+
+[node name="Sun" type="Sprite"]
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+visible = false
+polygon = PoolVector2Array( -42, -59, -19, -61, 1, -74, 23, -59, 42, -59, 53, -34, 71, -22, 65, 2, 71, 23, 51, 40, 42, 60, 17, 60, 1, 74, -21, 62, -44, 60, -50, 41, -70, 27, -66, 0, -70, -23, -53, -39 )
