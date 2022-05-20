@@ -113,10 +113,10 @@ visible = false
 [node name="StartPositions" type="Node" parent="."]
 
 [node name="CloudStart1" type="Position2D" parent="StartPositions"]
-position = Vector2( 286, -224 )
+position = Vector2( 350, -224 )
 
 [node name="CloudStart2" type="Position2D" parent="StartPositions"]
-position = Vector2( 1485, -563 )
+position = Vector2( 1570, -563 )
 
 [node name="CloudTimer" type="Node" parent="."]
 
