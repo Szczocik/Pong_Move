@@ -98,5 +98,4 @@ func game_over():
 
 func _on_Timer1_timeout(): cloud_spawn(1)
 func _on_Timer2_timeout(): cloud_spawn(2)
-
-
+func _on_Timer3_timeout(): cloud_spawn(3)

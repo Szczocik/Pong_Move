@@ -118,6 +118,9 @@ position = Vector2( 350, -224 )
 [node name="CloudStart2" type="Position2D" parent="StartPositions"]
 position = Vector2( 1570, -563 )
 
+[node name="CloudStart3" type="Position2D" parent="StartPositions"]
+position = Vector2( 960, -904 )
+
 [node name="CloudTimer" type="Node" parent="."]
 
 [node name="Timer1" type="Timer" parent="CloudTimer"]
@@ -125,6 +128,10 @@ wait_time = 2.0
 autostart = true
 
 [node name="Timer2" type="Timer" parent="CloudTimer"]
+wait_time = 2.0
+autostart = true
+
+[node name="Timer3" type="Timer" parent="CloudTimer"]
 wait_time = 2.0
 autostart = true
 
@@ -136,3 +143,4 @@ script = ExtResource( 9 )
 [connection signal="timeout" from="CountdownTimer" to="." method="_on_CountdownTimer_timeout"]
 [connection signal="timeout" from="CloudTimer/Timer1" to="." method="_on_Timer1_timeout"]
 [connection signal="timeout" from="CloudTimer/Timer2" to="." method="_on_Timer2_timeout"]
+[connection signal="timeout" from="CloudTimer/Timer3" to="." method="_on_Timer3_timeout"]
