@@ -102,10 +102,10 @@ stream = ExtResource( 2 )
 [node name="GUI" parent="." instance=ExtResource( 6 )]
 
 [node name="Sun" parent="." instance=ExtResource( 3 )]
-position = Vector2( 549, 515 )
+position = Vector2( 550, 515 )
 
 [node name="Sun2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1417, 519 )
+position = Vector2( 1370, 515 )
 
 [node name="BGM5" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
