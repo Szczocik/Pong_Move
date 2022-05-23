@@ -35,7 +35,10 @@ __meta__ = {
 [node name="CountdownLabel" type="Label" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_bottom = -400.0
+margin_left = 2.0
+margin_top = 7.0
+margin_right = 2.0
+margin_bottom = -393.0
 custom_fonts/font = SubResource( 5 )
 text = "Countdown"
 align = 1
@@ -105,91 +108,106 @@ stream = ExtResource( 2 )
 [node name="GUI" parent="." instance=ExtResource( 6 )]
 
 [node name="Coin" parent="." instance=ExtResource( 9 )]
-position = Vector2( 72, 248 )
+position = Vector2( 110, 215 )
 
 [node name="Coin2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 298, 222 )
+position = Vector2( 310, 215 )
 
 [node name="Coin3" parent="." instance=ExtResource( 9 )]
-position = Vector2( 553, 206 )
+position = Vector2( 510, 215 )
 
 [node name="Coin4" parent="." instance=ExtResource( 9 )]
-position = Vector2( 813, 245 )
+position = Vector2( 710, 215 )
 
 [node name="Coin5" parent="." instance=ExtResource( 9 )]
-position = Vector2( 123, 433 )
+position = Vector2( 110, 445 )
 
 [node name="Coin6" parent="." instance=ExtResource( 9 )]
-position = Vector2( 232, 343 )
+position = Vector2( 210, 330 )
 
 [node name="Coin7" parent="." instance=ExtResource( 9 )]
-position = Vector2( 494, 334 )
+position = Vector2( 410, 330 )
 
 [node name="Coin16" parent="." instance=ExtResource( 9 )]
-position = Vector2( 870, 529 )
+position = Vector2( 510, 445 )
 
 [node name="Coin17" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1033, 225 )
+position = Vector2( 910, 215 )
 
 [node name="Coin18" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1017, 391 )
+position = Vector2( 810, 330 )
 
 [node name="Coin19" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1129, 589 )
+position = Vector2( 1510, 445 )
 
 [node name="Coin20" parent="." instance=ExtResource( 9 )]
-position = Vector2( 955, 701 )
+position = Vector2( 210, 560 )
 
 [node name="Coin21" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1323, 426 )
+position = Vector2( 1010, 330 )
 
 [node name="Coin22" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1435, 228 )
+position = Vector2( 1310, 215 )
 
 [node name="Coin23" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1555, 506 )
+position = Vector2( 1210, 330 )
 
 [node name="Coin24" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1616, 324 )
+position = Vector2( 1710, 215 )
 
 [node name="Coin25" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1782, 199 )
+position = Vector2( 1510, 215 )
 
 [node name="Coin26" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1809, 461 )
-
-[node name="Coin27" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1745, 709 )
+position = Vector2( 1410, 330 )
 
 [node name="Coin28" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1377, 621 )
+position = Vector2( 1710, 445 )
 
 [node name="Coin29" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1532, 733 )
+position = Vector2( 410, 560 )
 
 [node name="Coin8" parent="." instance=ExtResource( 9 )]
-position = Vector2( 477, 465 )
+position = Vector2( 1610, 330 )
 
 [node name="Coin9" parent="." instance=ExtResource( 9 )]
-position = Vector2( 126, 651 )
+position = Vector2( 710, 445 )
 
 [node name="Coin10" parent="." instance=ExtResource( 9 )]
-position = Vector2( 276, 611 )
+position = Vector2( 910, 445 )
 
 [node name="Coin11" parent="." instance=ExtResource( 9 )]
-position = Vector2( 477, 628 )
+position = Vector2( 1110, 445 )
 
 [node name="Coin12" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1234, 251 )
+position = Vector2( 1110, 215 )
 
 [node name="Coin13" parent="." instance=ExtResource( 9 )]
-position = Vector2( 318, 481 )
+position = Vector2( 310, 445 )
 
 [node name="Coin14" parent="." instance=ExtResource( 9 )]
-position = Vector2( 655, 398 )
+position = Vector2( 610, 330 )
 
 [node name="Coin15" parent="." instance=ExtResource( 9 )]
-position = Vector2( 652, 622 )
+position = Vector2( 1310, 445 )
+
+[node name="Coin27" parent="." instance=ExtResource( 9 )]
+position = Vector2( 610, 560 )
+
+[node name="Coin30" parent="." instance=ExtResource( 9 )]
+position = Vector2( 810, 560 )
+
+[node name="Coin31" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1010, 562 )
+
+[node name="Coin32" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1210, 560 )
+
+[node name="Coin33" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1410, 560 )
+
+[node name="Coin34" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1610, 560 )
 
 [node name="BGM4" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
