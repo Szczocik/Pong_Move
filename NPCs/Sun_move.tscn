@@ -24,6 +24,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [ 0.0 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "Sun_move"
@@ -36,19 +48,35 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 1.5, 3, 4.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 180.0 ]
+"values": [ 0.0, 180.0, 0.0, -180.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -200, 0 ), Vector2( -100, 0 ), Vector2( 0, 0 ), Vector2( 200, 0 ), Vector2( 100, 0 ) ]
 }
 
 [node name="Sun_move" type="Node2D"]
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D"]
 frames = SubResource( 1 )
 animation = "stand"
+playing = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KinematicBody2D"]
 visible = false
