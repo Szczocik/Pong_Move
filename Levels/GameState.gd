@@ -2,7 +2,7 @@ extends Node
 
 const CLOUD = preload("res://Items/Cloud.tscn")
 
-var PlayerScore = 3
+var PlayerScore = 8
 
 
 
@@ -30,9 +30,9 @@ func _on_Top_body_entered(body):
 	$CountdownTimer.start()
 	$CountdownLabel.visible = true
 	$ScoreSound.play()
-	if PlayerScore > 7:
-		get_tree().call_group("BallGroup","speed_ball")
-		update_GUI()
+	#if PlayerScore > 7:
+	#	get_tree().call_group("BallGroup","speed_ball")
+	#	update_GUI()
 	
 	if PlayerScore == 10:
 		update_GUI()
