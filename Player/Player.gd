@@ -1,8 +1,6 @@
 extends KinematicBody2D
 
 var speed = 400
-var justwarped = false
-
 
 
 func _physics_process(delta):
@@ -12,6 +10,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("ui_right"):
 		velocity.x += 1
 	move_and_slide(velocity * speed)
+	process_mouse()
 	
 	
 func process_mouse():
@@ -19,30 +18,9 @@ func process_mouse():
 	var paddle_width = get_node("CollisionShape2D").shape.extents.x
 	var viewport_width = get_viewport().size.x
 	if position.x < target:
-		pass
+		if not test_move(Transform2D(transform), Vector2(1,0)):
+			position.x = min(target, viewport_width - paddle_width)
+	elif position.x > target:
+		if not test_move(Transform2D(transform), Vector2(-1,0)):
+			position.x = max(target, paddle_width)
 	
-#func update_movement():
-#	look_at(get_global_mouse_position())
-#	var velocity = Vector2.ZERO
-#	if Input.is_action_pressed(("move_left")) and not Input.is_action_pressed(("move_right")):
-#		 velocity.x -= 1 
-#	if Input.is_action_pressed(("move_right")) and not Input.is_action_pressed(("move_left")):
-#		 velocity.x += 1 
-func _input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton:
-		if event.button_index == BUTTON_LEFT:
-			justwarped = event.pressed
-
-	
-func _input(event):
-	if event is InputEventMouseButton:
-		if event.button_index == BUTTON_LEFT and not event.pressed:
-			justwarped = false
-
-
-
-
-#		if !justwarped:
-#			self.translate(event.relative)
-#		else:
-#			justwarped = false
